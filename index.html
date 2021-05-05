@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Student Database</title>
+<link href="https://cdn2.iconfinder.com/data/icons/font-awesome/1792/database-512.png" sizes="any" rel="icon" type="image/png">
+<meta name="theme-color" content="#acad4e">
+<link rel="stylesheet" href="style.css">
+</head>
+<body onload="load()">
+  <div class="beforeload">
+    <div class="lds-facebook"><div></div><div></div><div></div></div>
+  </div>
+<div id="main" style="display: none;">
+  <div style="display: grid;place-items: center;">
+    <h2 style="color: #fff;text-shadow: 1px 1px black;">Free DataBase</h2>
+    <button id="message" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">SIGN IN</button>
+    <button id="logout" onclick="out()" style="display: none;width: auto;">LOGOUT</button>
+</div>
+<div id="id01" class="modal">
+
+<div class="modal-content animate">
+  <div class="imgcontainer">
+    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close">&times;</span>
+    <img src="https://source.unsplash.com/collection/190727/900x900" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="container">
+    <label for="uname"><b id="nm">Username</b></label>
+    <input type="text" placeholder="Enter E-mail" name="uname" id="userFire" required autofocus>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" id="passFire" required>
+    <div id="confirmPass" style="display: none;">
+      <label for="psw1"><b>Confirm Password</b></label>
+      <input type="password" placeholder="Retype Password" id="repass" name="psw1"  required>
+    </div>
+    <button onclick="login()" id="signlogin">Login</button>
+    <button onclick="signin()" style="display: none;" id="signlogup">SIGN UP</button>
+    <label>
+     <p><span id="account"><i>Don't have an account </i></span><label class="here" style="width: auto;">SignUp<input type="radio" name="signup" onclick="dosome(this)" class="sign"></label>
+            <label class="here" style="display: none;width: auto;">Back<input type="radio" name="signup" onclick="dosome1(this)" class="sign"><label></p>
+    </label>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+  </div>
+</div>
+</div>
+<div class="inputarea">
+  <label><b>Reg No</b><input type="number" placeholder="Reg No" id="regno"></label>
+  <label><b>Name</b><input type="text" placeholder="User name" id="stuname"></label>
+  <label><b>College Name</b><input type="text" placeholder="College Name" id="college"></label>
+  <label><b>Department</b><input type="text" placeholder="Department" id="dept"></label>
+  <label><b>CGPA</b><input type="number" placeholder="CGPA" id="cgpa"></label>
+  <label><b>Phone No</b><input type="number" placeholder="Phone No" id="phone"></label>
+  <label><b>E-Mail</b><input type="email" placeholder="Enter E-mail" id="mail"></label>
+  <div class="workloads">
+      <button style="width: auto;" onclick="inserted()">Insert</button>
+      <button style="width: auto;" onclick="selected()">Select</button>
+      <button style="width: auto;" onclick="updated()">Update</button>
+      <button style="width: auto;" onclick="deleted()">Delete</button>
+  </div>
+</div>
+</div>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-database.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script src="javascript.js"></script>
+
+</body>
+</html>
