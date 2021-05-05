@@ -11,8 +11,6 @@ document.addEventListener('contextmenu', event => event.preventDefault());
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   var database = firebase.database();
-</script>
-<script>
 // Get the modal
 var modal = document.getElementById('id01');
 
